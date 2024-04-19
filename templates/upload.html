@@ -23,7 +23,7 @@
 </form><br>
 
 <video autoplay="autoplay" controls="controls"  >
-	<source src="{{ url_for('write display_video() here', filename=filename) }}" type="video/mp4"></source>
+	<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4"></source>
 </video><br>
 <a class="btn btn-success btn-lg" href="{{ url_for('.download_file') }}">Download Black & White video</a>
 
@@ -36,7 +36,5 @@
 
 </body>
 </html>
-
-
 
 
