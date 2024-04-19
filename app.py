@@ -18,7 +18,7 @@ def upload_video():
     filename = secure_filename(file.filename)
     file.save(os.path.join('static/', filename))
 
-    source = cv2.VideoCapture('static/', filename)
+    source = cv2.VideoCapture('static/' + filename)
     frame_width = int(source.get(3))
     frame_height = int(source.get(4))
     size = (frame_width, frame_height)
@@ -61,3 +61,4 @@ def display_video(filename):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
